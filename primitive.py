@@ -39,3 +39,30 @@ print(f"the result (3): {result}")
 # Bu yerda "FullStack" so'zi "MasterClass"ga almashmoqda
 result = course.replace("FullStack", "MasterClass")
 print(f"the result (4): {result}")
+
+
+print("===== boolean =====")
+# Ishlatiladigan funksiyalar: type(), input(), bool(), int(), str()
+
+# 1. Foydalanuvchidan qiymat qabul qilish
+y = input("Give your value for y: ")
+print("y:", y)
+
+# 2. .isnumeric() metodi kiritilgan matn faqat raqamlardan iboratligini tekshiradi
+result = y.isnumeric()
+print(f"the input value is numeric: {result}")
+
+# 3. TRUTHY vs FALSY qiymatlar
+# Pythonda har qanday ob'ekt mantiqiy (bool) kontekstda True yoki False qiymatga ega bo'ladi.
+
+# TRUTHY (True hisoblanadiganlar): True, noldan farqli sonlar (100, -100), bo'sh bo'lmagan matnlar ("MIT")
+# FALSY (False hisoblanadiganlar): False, 0, bo'sh matn (""), None (bo'shlik)
+
+# Barcha Falsy qiymatlarni 'or' orqali tekshirish
+test_falsy = "" or False or None or 0
+# bool() funksiyasi qiymatni True yoki False-ga o'tkazib beradi
+print("test_falsy:", bool(test_falsy))  # Natija: False chiqadi
+
+# Truthy qiymatni tekshirish
+test_truthy = "MIT"
+print("test_truthy:", bool(test_truthy))  # Natija: True chiqadi
