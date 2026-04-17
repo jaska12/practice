@@ -61,3 +61,23 @@ print("result3:", result3)
 # Shunda funksiya o'zining tepada belgilangan age=22 qiymatini ishlatadi.
 result4 = give_greet("jack")
 print("result4:", result4)
+
+print("===== Scope =====")
+
+# 3. Global o'zgaruvchi: b o'zgaruvchisi funksiyadan tashqarida e'lon qilingan.
+# Uni dasturning istalgan joyida, hatto funksiya ichida ham ishlatish mumkin.
+b = 100
+
+# DEFINE - Funksiyani yaratish
+
+
+def calculate(a):  # 2. Parametr (Lokal): a faqat funksiya ichida mavjud.
+
+    # 1. Lokal o'zgaruvchi: c o'zgaruvchisi funksiya ichida yaratilgan.
+    # Uni funksiyadan tashqarida ishlatib bo'lmaydi.
+    c = a * b
+    print(f"the c value: {c}")
+
+
+# CALL - Funksiyani chaqirish
+calculate(5)
