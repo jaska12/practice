@@ -4,6 +4,8 @@ OBJECTS
 (2) Iterable objects & RANGE
 (3) DICTIONARY
 (4) Error handling system
+
+///
 '''
 
 import array   # module (paket ichidagi modul)
