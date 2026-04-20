@@ -1,25 +1,3 @@
-/* A-TASK:
-Savol: Shunday 2 parametrli function tuzing, hamda birinchi parametrdagi 
-letterni ikkinchi parametrdagi so'zdan qatnashgan sonini return qilishi kerak bo'ladi.
-MASALAN: countLetter("e", "engineer") 3ni return qiladi.
-
-
-//  Masalaning yechimi:
-function countLetter(letter, word) {
-    let count = 0;
-
-    // Matndagi har bir harfni tekshiramiz
-    for (let i = 0; i < word.length; i++) {
-        // word[i] - bu matndagi har bir harf (F, u, l, l...)
-        if (word[i].toLowerCase() === letter.toLowerCase()) {
-            count++;
-        }
-    }
-
-    return count;
-}
-*/
-
 /*
 B-TASK:
 Shunday function tuzing, u 1ta string parametrga ega bolsin, 
@@ -45,3 +23,41 @@ function countDigits(text) {
 
 const result = countDigits("ad2a54y79wet0sfgb9");
 console.log("Digits count:", result);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* A-TASK:
+Savol: Shunday 2 parametrli function tuzing, hamda birinchi parametrdagi 
+letterni ikkinchi parametrdagi so'zdan qatnashgan sonini return qilishi kerak bo'ladi.
+MASALAN: countLetter("e", "engineer") 3ni return qiladi.
+
+
+//  Masalaning yechimi:
+function countLetter(letter, word) {
+    let count = 0;
+
+    // Matndagi har bir harfni tekshiramiz
+    for (let i = 0; i < word.length; i++) {
+        // word[i] - bu matndagi har bir harf (F, u, l, l...)
+        if (word[i].toLowerCase() === letter.toLowerCase()) {
+            count++;
+        }
+    }
+
+    return count;
+}
+*/
+
