@@ -1,6 +1,55 @@
+/**
+ * C-TASK (NodeJS)
+ * * Shunday function tuzing, u 2ta string parametrga ega bolsin.
+ * Agar har ikkala string bir xil harflardan iborat bolsa true,
+ * aks holda false qaytarsin.
+ * * MASALAN: checkContent("futureengineer", "engineerfuture") return true
+ */
+
+function checkContent(word1, word2) {
+    // 1. Uzunlikni tekshirish 
+    if (word1.length !== word2.length) {
+        return false;
+    }
+
+    // 2. Harflarni kichik qilib, word2 ni massivga o'tkazamiz
+    let arr2 = word2.toLowerCase().split('');
+    let str1 = word1.toLowerCase();
+
+    // 3. For loop yordamida word1 dagi har bir harfni aylanib chiqamiz
+    for (let i = 0; i < str1.length; i++) {
+        let char = str1[i];
+
+        // indexOf harfning ikkinchi massivdagi o'rnini (index) topadi
+        let index = arr2.indexOf(char);
+
+        // 4. Agar harf topilsa, uni massivdan o'chirib tashlaymiz
+        if (index !== -1) {
+            arr2.splice(index, 1);
+        } else {
+            return false;
+        }
+    }
+
+    return arr2.length === 0;
+}
+
+// --- TEKSHIRISH ---
+
+// Musbat holat (Haqiqatdan bir xil harflar)
+const result1 = checkContent("futureengineer", "engineerfuture");
+console.log("Natija 1:", result1); // true
+
+// Manfiy holat (Uzunlik bir xil, lekin bitta harf boshqa)
+const result2 = checkContent("futureengineer", "futureengineee");
+console.log("Natija 2:", result2); // false
+
+
+
+
 /*
 B-TASK:
-Shunday function tuzing, u 1ta string parametrga ega bolsin, 
+Shunday function tuzing, u 1ta string parametrga ega bolsin,
 hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
 
 MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
@@ -8,7 +57,7 @@ MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
 
 
 //  Masalaning yechimi:
-function countDigits(text) {
+/*function countDigits(text) {
     let count = 0;
 
     for (let i = 0; i < text.length; i++) {
@@ -22,22 +71,7 @@ function countDigits(text) {
 }
 
 const result = countDigits("ad2a54y79wet0sfgb9");
-console.log("Digits count:", result);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log("Digits count:", result);*/
 
 /* A-TASK:
 Savol: Shunday 2 parametrli function tuzing, hamda birinchi parametrdagi 
