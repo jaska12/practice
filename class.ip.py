@@ -95,3 +95,28 @@ print(Dog.description)
 
 print(dog.voice, fish.voice)
 print("status:", dog.status)
+
+print("===== POLIMORPHISM =====")
+
+dog.make_voice()
+fish.make_voice()
+# Izoh: polymorphism — bir xil method (make_voice) turli classlarda turlicha ishlaydi
+
+print("------")
+
+# fish > Fish > Animal > object
+a = isinstance(fish, Fish)
+b = isinstance(fish, Animal)
+c = isinstance(fish, object)
+d = isinstance("MIT", object)
+
+result = a and b and c and d
+print(f"the result: {result}")
+# Izoh: isinstance() — obyekt qaysi classga tegishli ekanini tekshiradi
+
+# Fish > Animal > object
+data1 = issubclass(Fish, Animal)
+data2 = issubclass(Animal, object)
+
+print("data:", data1, data2)
+#  issubclass() — class boshqa classdan meros olganmi tekshiradi
