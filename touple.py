@@ -76,3 +76,15 @@ def greeting(*args, **kwargs):
 
 # CALL
 greeting("hi", True, 10, name="Jeck", age=22)
+print("===== zip =====")
+# Ikki to'plamni bir-biriga juftlab birlashtirish
+tuple1 = (1, 2, 3, 4)
+tuple2 = ('a', 'b', 'c')
+
+zipped = zip(tuple1, tuple2)  # zip obyekti hosil bo'ladi
+print("zipped:", zipped)
+
+# zip natijasini ko'rish uchun uni list'ga o'tkazamiz
+result = list(zipped)
+# E'tibor bering: tuple2'da 3ta element bo'lgani uchun, natijada ham 3ta juftlik bo'ladi
+print(f"the result: {result}")
