@@ -36,3 +36,15 @@ groups = ["MIT", "ALI", "DEVEX", "MG"]
 (x, y, *z) = groups  # x="MIT", y="FLEXY", qolganlari esa z ga list bo'lib yig'iladi
 print(f"the x: {x} and y: {y}")
 print("z:", z)  # Natija: list ko'rinishida bo'ladi
+# **kwargs > dictionary - Kalit so'zli argumentlarni lug'at (dict) qilib yig'ish
+
+
+def introduce(**kwargs):
+    # kwargs - bu funksiya ichida lug'atga aylanadi
+    print(f"the type(**kwargs) value: {type(kwargs)}")
+    print(f"Hi, I am {kwargs['name']} and I am {kwargs['age']} years old!")
+
+
+# CALL - Argumentlar key=value ko'rinishida beriladi
+introduce(name="Jeck", age=28)
+introduce(name="Alisher", age=30, single=True)
