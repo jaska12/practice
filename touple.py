@@ -30,3 +30,9 @@ print(animals[0])
 # try avoid this - Qavslarsiz ham tuple yaratish mumkin, lekin tavsiya etilmaydi
 people = "Alisher", "Jeck"
 animals = "dog",  # Bitta elementli tuple yaratish uchun oxirida vergul kerak
+print("===== Unpacking arguments =====")
+# Ro'yxat elementlarini o'zgaruvchilarga taqsimlash
+groups = ["MIT", "ALI", "DEVEX", "MG"]
+(x, y, *z) = groups  # x="MIT", y="FLEXY", qolganlari esa z ga list bo'lib yig'iladi
+print(f"the x: {x} and y: {y}")
+print("z:", z)  # Natija: list ko'rinishida bo'ladi
