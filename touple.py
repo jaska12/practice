@@ -48,3 +48,31 @@ def introduce(**kwargs):
 # CALL - Argumentlar key=value ko'rinishida beriladi
 introduce(name="Jeck", age=28)
 introduce(name="Alisher", age=30, single=True)
+# *args > tuple - Funksiyaga istalgancha oddiy argument uzatish
+
+
+def calculate(*args):
+    print("*args >", args)  # Kelgan barcha sonlar tuple bo'lib tushadi
+    total = 1
+    for x in args:
+        total *= x  # Barcha sonlarni bir-biriga ko'paytiradi
+    print(f"the total value: {total}")
+    return total
+
+
+# CALL - Funksiyani turli miqdordagi argumentlar bilan chaqirish
+calculate(1, 7, 2, 3)
+calculate(0, 2, 300)
+calculate(5, 7)
+print("-----")
+
+# Ham *args, ham **kwargs ishlatilgan funksiya
+
+
+def greeting(*args, **kwargs):
+    print("*args >", args)      # Oddiy qiymatlar uchun
+    print("**kwargs >", kwargs)  # Kalitli qiymatlar uchun
+
+
+# CALL
+greeting("hi", True, 10, name="Jeck", age=22)
