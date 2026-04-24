@@ -1,0 +1,32 @@
+''' Tuple
+    (1) What is tuple: tuple vs list
+    (2) Unpacking arguments
+    (3) zip
+'''
+
+print("===== What is tuple: tuple vs list =====")
+# Java/PHP/NodeJS array => Python list (Python'dagi list boshqa tillardagi array'ga o'xshaydi)
+
+# literal - to'g'ridan-to'g'ri ro'yxat yaratish
+numbs = [3, 5, 1, 2]
+
+# constructor - list() funksiyasi yordamida ro'yxatga aylantirish
+letters = list("Hello World!")
+
+fruits = ["apple", "lemon", "banana", "kiwi"]
+print("before fruits:", fruits)
+
+# List elementini o'zgartirish mumkin (Mutable)
+fruits[2] = "melon"
+print("after fruits:", fruits)
+
+# we can not mutate tuple - Tuple elementlarini o'zgartirib bo'lmaydi (Immutable)
+animals = ("dog", "cat", "fish", "lion")
+tuple_obj = ("MIT", 100, True, None)
+
+print(animals[0])
+# animals[0] = "bird"  # Agar bu qator ishga tushsa, xatolik beradi (TypeError)
+
+# try avoid this - Qavslarsiz ham tuple yaratish mumkin, lekin tavsiya etilmaydi
+people = "Alisher", "Jeck"
+animals = "dog",  # Bitta elementli tuple yaratish uchun oxirida vergul kerak

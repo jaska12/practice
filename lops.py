@@ -58,7 +58,7 @@ while True:
     x = int(input("Find number "))  # Foydalanuvchidan son kiritishni so'raydi.
 
     # Agar kiritilgan son 41 bo'lsa, g'olib bo'ladi va break orqali sikl to'xtaydi.
-    if x == 41:
+    if x == 40:
         print(f"You found number in {count} steps")
         break
     else:
