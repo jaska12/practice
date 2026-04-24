@@ -1,13 +1,43 @@
-/**
- * C-TASK (NodeJS)
+/* D-TASK:
+Savol: Shunday function tuzingki unga integerlardan iborat array pass bo‘lsin 
+va function bizga o‘sha arrayning eng katta qiymatiga tegishli birinchi indexni qaytarsin.
+
+MASALAN: getHighestIndex([3, 9, 7, 9, 2]) 1 ni return qiladi.
+*/
+
+// Masalaning yechimi:
+function getHighestIndex(arr) {
+    let max = arr[0];     // Eng katta qiymatni saqlash uchun
+    let index = 0;        // O‘sha qiymatning indexi
+
+    // Array bo‘ylab yurib chiqamiz
+    for (let i = 0; i < arr.length; i++) {
+        // Agar hozirgi element max'dan katta bo‘lsa yangilaymiz
+        if (arr[i] > max) {
+            max = arr[i];
+            index = i;
+        }
+    }
+
+    return index;
+}
+// CALL
+const result = getHighestIndex([3, 9, 7, 9, 2]);
+console.log(result);
+
+
+
+
+
+/** C-TASK (NodeJS)
  * * Shunday function tuzing, u 2ta string parametrga ega bolsin.
  * Agar har ikkala string bir xil harflardan iborat bolsa true,
  * aks holda false qaytarsin.
  * * MASALAN: checkContent("futureengineer", "engineerfuture") return true
- */
+
 
 function checkContent(word1, word2) {
-    // 1. Uzunlikni tekshirish 
+    // 1. Uzunlikni tekshirish
     if (word1.length !== word2.length) {
         return false;
     }
@@ -44,11 +74,10 @@ console.log("Natija 1:", result1); // true
 const result2 = checkContent("futureengineer", "futureengineee");
 console.log("Natija 2:", result2); // false
 
+*/
 
 
-
-/*
-B-TASK:
+/*B-TASK:
 Shunday function tuzing, u 1ta string parametrga ega bolsin,
 hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
 
