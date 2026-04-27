@@ -52,3 +52,22 @@ animals.clear()
 numbers = [2, 20, 12, 8, 57]
 numbers.sort()
 numbers.sort(reverse=True)
+print("===== Lambda function =====")
+
+
+def calculate(x, y): return x * y
+
+
+result = calculate(3, 5)
+print("result:", result)
+
+people = [
+    ("Robert", 20),
+    ("Steve", 19),
+    ("Joseph", 25),
+    ("Michael", 30),
+    ("Ali", 40)
+]
+
+people.sort()
+people.sort(key=lambda person: person[1])
