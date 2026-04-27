@@ -1,13 +1,44 @@
 /**
+ * E-TASK: Bitta string argumentni qabul qilib,
+ * o'sha stringni teskari qilib return qiladigan funksiya.
+ * * MASALAN: getReverse("hello") => "olleh"
+ */
+
+function getReverse(text) {
+    // 1. split('') - matnni har bir harfini alohida element qilib massivga aylantiradi
+    // 2. reverse() - massiv elementlarini teskari tartibga o'giradi
+    // 3. join('') - massiv elementlarini yana bitta matnga birlashtiradi
+    return text.split('').reverse().join('');
+}
+
+// --- TEKSHIRISH ---
+
+// 1
+const result1 = getReverse("hello");
+console.log("Natija 1:", result1);
+
+// 2
+const result2 = getReverse("mitgroup");
+console.log("Natija 2:", result2);
+
+// 3
+const result3 = getReverse("futureengineer");
+console.log("Natija 3:", result3);
+
+
+
+
+
+
+/**
  * C-TASK (NodeJS)
  * * Shunday function tuzing, u 2ta string parametrga ega bolsin.
  * Agar har ikkala string bir xil harflardan iborat bolsa true,
  * aks holda false qaytarsin.
  * * MASALAN: checkContent("futureengineer", "engineerfuture") return true
- */
 
 function checkContent(word1, word2) {
-    // 1. Uzunlikni tekshirish 
+    // 1. Uzunlikni tekshirish
     if (word1.length !== word2.length) {
         return false;
     }
@@ -44,7 +75,7 @@ console.log("Natija 1:", result1); // true
 const result2 = checkContent("futureengineer", "futureengineee");
 console.log("Natija 2:", result2); // false
 
-
+*/
 
 
 /*
