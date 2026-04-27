@@ -71,3 +71,23 @@ people = [
 
 people.sort()
 people.sort(key=lambda person: person[1])
+print("===== enumerate, map and filter =====")
+
+animals = ["dog", "cat", "fish"]
+
+for (index, value) in enumerate(animals):
+    print(index, value)
+
+cars = [
+    ("Ferrari", 78),
+    ("Tayota", 87),
+    ("Audi", 116),
+    ("BMW", 109),
+    ("Pagani", 33)
+]
+
+result_map = map(lambda car: car[0], cars)
+print(list(result_map))
+
+result_filter = filter(lambda car: car[1] > 80, cars)
+print(list(result_filter))
