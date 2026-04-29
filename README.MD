@@ -25,3 +25,16 @@ git pull origin master
 - Object
 - class
 - class deev veek
+```
+## Pip commands:
+
+```
+windows pip | macOs pip3
+
+pip list
+pip install pillow
+pip uninstall pilliw
+pip show pillow
+pip freeze > requirements.txt
+```
+```
