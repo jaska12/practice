@@ -1,8 +1,38 @@
 /**
+ * F-TASK: Bitta string argumentni qabul qilib,
+ * agar stringda bir xil harf qatnashgan bo'lsa true, 
+ * qatnashmasa false qaytaradigan funksiya.
+ * * MASALAN: findDoublers("hello") => true
+ */
+
+function findDoublers(text) {
+    // 1. split('')
+    const letters = text.split('');
+    //2/ Bu yerda har bir harfning massivdagi birinchi va oxirgi indeksi mos kelmasligini tekshiramiz
+    return letters.some((char, index) => letters.indexOf(char) !== index);
+}
+
+// --- TEKSHIRISH ---
+
+// 1. Takrorlanuvchi harf bor holat (l harfi)
+const result1 = findDoublers("hello");
+console.log("result 1:", result1); // true
+
+// 2. Takrorlanuvchi harf yo'q holat
+const result2 = findDoublers("mitgroup");
+console.log("result 2:", result2); // false
+
+// 3. Takrorlanuvchi harf bor holat (e harfi)
+const result3 = findDoublers("futureengineer");
+console.log("result 3:", result3); // true
+
+
+
+/**
  * E-TASK: Bitta string argumentni qabul qilib,
  * o'sha stringni teskari qilib return qiladigan funksiya.
  * * MASALAN: getReverse("hello") => "olleh"
- */
+
 
 function getReverse(text) {
     // 1. split('') - matnni har bir harfini alohida element qilib massivga aylantiradi
@@ -24,7 +54,7 @@ console.log("Natija 2:", result2);
 // 3
 const result3 = getReverse("futureengineer");
 console.log("Natija 3:", result3);
-
+*/
 
 
 
