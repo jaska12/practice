@@ -1,9 +1,42 @@
 /**
+ * H-TASK: 
+ * Shart: Shunday function tuzing, u integerlardan iborat arrayni 
+ * argument sifatida qabul qilib, faqat positive (musbat) 
+ * qiymatlarni olib string holatda return qilsin.
+ * 
+ * MASALAN: getPositive([1, -4, 2]) return qiladi "12"
+ */
+
+function getPositive(arr) {
+    // 1. Array ichidan filter metodi yordamida faqat 0 dan katta sonlarni ajratib olamiz
+    const positives = arr.filter((num) => num > 0);
+
+    // 2. Hosil bo'lgan musbat sonlar massivini join('') orqali bitta matn (string) holatiga keltiramiz
+    return positives.join('');
+}
+
+// --- TEKSHIRISH ---
+
+// 1. Aralash sonlar berilgan holat
+const result1 = getPositive([1, -4, 2]);
+console.log("result 1:", result1); // "12"
+
+// 2. Katta va turli xil musbat sonlar qatnashgan holat
+const result2 = getPositive([-5, 10, -3, 20]);
+console.log("result 2:", result2); // "1020"
+
+// 3. Faqat manfiy sonlar berilgan holat
+const result3 = getPositive([-1, -2, -3]);
+console.log("result 3:", result3); // "" (bo'sh string qaytadi)
+
+
+
+/**
  * F-TASK: Bitta string argumentni qabul qilib,
- * agar stringda bir xil harf qatnashgan bo'lsa true, 
+ * agar stringda bir xil harf qatnashgan bo'lsa true,
  * qatnashmasa false qaytaradigan funksiya.
  * * MASALAN: findDoublers("hello") => true
- */
+
 
 function findDoublers(text) {
     // 1. split('')
@@ -25,7 +58,7 @@ console.log("result 2:", result2); // false
 // 3. Takrorlanuvchi harf bor holat (e harfi)
 const result3 = findDoublers("futureengineer");
 console.log("result 3:", result3); // true
-
+*/
 
 
 /**
