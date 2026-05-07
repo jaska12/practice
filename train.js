@@ -1,11 +1,55 @@
 /**
- * H-TASK: 
- * Shart: Shunday function tuzing, u integerlardan iborat arrayni 
- * argument sifatida qabul qilib, faqat positive (musbat) 
- * qiymatlarni olib string holatda return qilsin.
+ * J-TASK: 
+ * Shart: Shunday function yozing, u parametridagi array ichida 
+ * eng ko'p takrorlangan raqamni topib qaytarsin.
  * 
- * MASALAN: getPositive([1, -4, 2]) return qiladi "12"
+ * MASALAN: majorityElement([1, 2, 3, 4, 5, 4, 3, 4]) return 4
  */
+
+function majorityElement(arr) {
+    const countMap = {};
+    let maxCount = 0;
+    let mostFrequent = arr[0];
+
+    // 1. Har bir raqamning necha marta takrorlanganini hisoblab chiqamiz
+    for (const num of arr) {
+        // Agar raqam obyektda bo'lsa +1, bo'lmasa 1 deb belgilaymiz
+        countMap[num] = (countMap[num] || 0) + 1;
+
+        // 2. Hisoblash jarayonida eng katta takrorlanishni aniqlab boramiz
+        if (countMap[num] > maxCount) {
+            maxCount = countMap[num];
+            mostFrequent = num;
+        }
+    }
+
+    return mostFrequent;
+}
+
+// --- TEKSHIRISH ---
+
+// 1. Misoldagi holat (4 raqami 3 marta takrorlangan)
+const result1 = majorityElement([1, 2, 3, 4, 5, 4, 3, 4]);
+console.log("result 1:", result1); // 4
+
+// 2. Boshqa bir holat (10 raqami eng ko'p)
+const result2 = majorityElement([10, 20, 10, 5, 10, 30]);
+console.log("result 2:", result2); // 10
+
+// 3. Bir xil miqdorda takrorlanish bo'lsa, birinchisini qaytaradi
+const result3 = majorityElement([1, 1, 2, 2]);
+console.log("result 3:", result3); // 1
+
+
+
+/**
+ * H-TASK:
+ * Shart: Shunday function tuzing, u integerlardan iborat arrayni
+ * argument sifatida qabul qilib, faqat positive (musbat)
+ * qiymatlarni olib string holatda return qilsin.
+ *
+ * MASALAN: getPositive([1, -4, 2]) return qiladi "12"
+
 
 function getPositive(arr) {
     // 1. Array ichidan filter metodi yordamida faqat 0 dan katta sonlarni ajratib olamiz
@@ -29,7 +73,7 @@ console.log("result 2:", result2); // "1020"
 const result3 = getPositive([-1, -2, -3]);
 console.log("result 3:", result3); // "" (bo'sh string qaytadi)
 
-
+*/
 
 /**
  * F-TASK: Bitta string argumentni qabul qilib,
