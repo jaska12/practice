@@ -1,10 +1,46 @@
 /**
- * J-TASK: 
- * Shart: Shunday function yozing, u parametridagi array ichida 
- * eng ko'p takrorlangan raqamni topib qaytarsin.
+ * L-TASK: 
+ * Shart: Shunday function yozing, u string qabul qilsin va 
+ * string ichidagi hamma so'zlarni chappasiga yozib va 
+ * so'zlar ketma-ketligini buzmasdan stringni qaytarsin.
  * 
- * MASALAN: majorityElement([1, 2, 3, 4, 5, 4, 3, 4]) return 4
+ * MASALAN: reverseSentence("we like coding!") return "ew ekil !gnidoc"
  */
+
+function reverseSentence(sentence) {
+    // 1. Gapni so'zlarga ajratib olamiz (bo'sh joy orqali)
+    const words = sentence.split(' ');
+
+    // 2. Har bir so'zni alohida chappasiga o'girib chiqamiz
+    const reversedWords = words.map((word) => {
+        // So'zni harflarga ajratamiz, teskari qilamiz va qayta birlashtiramiz
+        return word.split('').reverse().join('');
+    });
+
+    // 3. Teskari o'girilgan so'zlarni qaytadan gap ko'rinishida birlashtiramiz
+    return reversedWords.join(' ');
+}
+
+// --- TEKSHIRISH ---
+
+// 1. Misoldagi holat
+const result1 = reverseSentence("we like coding!");
+console.log("result 1:", result1); // "ew ekil !gnidoc"
+
+// 2. Boshqa bir gap bilan tekshirish
+const result2 = reverseSentence("Javascript is awesome");
+console.log("result 2:", result2); // "tpircsavaJ si emosewa"
+
+// 3. Bitta so'zli holat
+const result3 = reverseSentence("Hello");
+console.log("result 3:", result3); // "olleH"
+/**
+ * J-TASK:
+ * Shart: Shunday function yozing, u parametridagi array ichida
+ * eng ko'p takrorlangan raqamni topib qaytarsin.
+ *
+ * MASALAN: majorityElement([1, 2, 3, 4, 5, 4, 3, 4]) return 4
+
 
 function majorityElement(arr) {
     const countMap = {};
@@ -40,7 +76,7 @@ console.log("result 2:", result2); // 10
 const result3 = majorityElement([1, 1, 2, 2]);
 console.log("result 3:", result3); // 1
 
-
+*/
 
 /**
  * H-TASK:
