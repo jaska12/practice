@@ -1,40 +1,71 @@
 """
-K-TASK: 
-Shart: Shunday function yozing, u string qabul qilsin va 
-string ichidagi eng uzun so'zni qaytarsin.
+M-TASK: 
+Shart: Shunday function yozing, u string qabul qilsin va string 
+palindrom (to'g'ri o'qilganda ham, orqasidan o'qilganda ham 
+bir xil o'qiladigan so'z) ekanligini aniqlab boolean qiymat qaytarsin.
 
-MASALAN: find_longest("I come from Uzbekistan") return "Uzbekistan"
+MASALAN: palindrom_check("dad") return True; palindrom_check("son") return False;
 """
 
 
-def find_longest(text):
-    # 1. Stringni .split() metodi orqali bo'shliqlardan ajratib, so'zlar ro'yxatiga o'giramiz
-    words = text.split()
-
-    # 2. Agar matn bo'sh bo'lsa, None yoki bo'sh string qaytaramiz
-    if not words:
-        return ""
-
-    # 3. max() funksiyasi yordamida ro'yxatdagi eng uzun so'zni topamiz.
-    # key=len parametri funksiyaga so'zlarning uzunligi bo'yicha solishtirishni aytadi.
-    longest_word = max(words, key=len)
-
-    return longest_word
+def palindrom_check(text):
+    text = text.lower()
+    reversed_text = text[::-1]
+    return text == reversed_text
 
 # --- TEKSHIRISH ---
 
 
-# 1. Oddiy gap berilgan holat
-result1 = find_longest("I come from Uzbekistan")
-print("result 1:", result1)  # "Uzbekistan"
+# 1. Palindrom bo'lgan holat
+result1 = palindrom_check("dad")
+print("result 1:", result1)  # True
 
-# 2. Turli uzunlikdagi so'zlar qatnashgan holat
-result2 = find_longest("Python is an amazing programming language")
-print("result 2:", result2)  # "programming"
+# 2. Palindrom bo'lmagan holat
+result2 = palindrom_check("son")
+print("result 2:", result2)  # False
 
-# 3. Faqat bitta so'zdan iborat holat
-result3 = find_longest("Hello")
-print("result 3:", result3)  # "Hello"
+# 3. Kattaroq palindrom so'z (katta harf bilan)
+result3 = palindrom_check("Madam")
+print("result 3:", result3)  # True
+
+
+# """
+# K-TASK:
+# Shart: Shunday function yozing, u string qabul qilsin va
+# string ichidagi eng uzun so'zni qaytarsin.
+
+# MASALAN: find_longest("I come from Uzbekistan") return "Uzbekistan"
+# """
+
+
+# def find_longest(text):
+#     # 1. Stringni .split() metodi orqali bo'shliqlardan ajratib, so'zlar ro'yxatiga o'giramiz
+#     words = text.split()
+
+#     # 2. Agar matn bo'sh bo'lsa, None yoki bo'sh string qaytaramiz
+#     if not words:
+#         return ""
+
+#     # 3. max() funksiyasi yordamida ro'yxatdagi eng uzun so'zni topamiz.
+#     # key=len parametri funksiyaga so'zlarning uzunligi bo'yicha solishtirishni aytadi.
+#     longest_word = max(words, key=len)
+
+#     return longest_word
+
+# # --- TEKSHIRISH ---
+
+
+# # 1. Oddiy gap berilgan holat
+# result1 = find_longest("I come from Uzbekistan")
+# print("result 1:", result1)  # "Uzbekistan"
+
+# # 2. Turli uzunlikdagi so'zlar qatnashgan holat
+# result2 = find_longest("Python is an amazing programming language")
+# print("result 2:", result2)  # "programming"
+
+# # 3. Faqat bitta so'zdan iborat holat
+# result3 = find_longest("Hello")
+# print("result 3:", result3)  # "Hello"
 
 
 # """
