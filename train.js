@@ -1,11 +1,47 @@
 /**
- * L-TASK: 
- * Shart: Shunday function yozing, u string qabul qilsin va 
- * string ichidagi hamma so'zlarni chappasiga yozib va 
- * so'zlar ketma-ketligini buzmasdan stringni qaytarsin.
+ * N-TASK: 
+ * Shart: Shunday function yozing, u raqamlardan tashkil topgan array 
+ * qabul qilsin va array ichidagi har bir raqam uchun raqamni o'zi 
+ * hamda o'sha raqamni kvadratidan tashkil topgan object hosil qilib, 
+ * hosil bo'lgan objectlarni array ichida qaytarsin.
  * 
- * MASALAN: reverseSentence("we like coding!") return "ew ekil !gnidoc"
+ * MASALAN: getSquareNumbers([1, 2, 3]) return 
+ * [{number: 1, square: 1}, {number: 2, square: 4}, {number: 3, square: 9}];
  */
+
+function getSquareNumbers(arr) {
+    // 1. .map() metodi orqali array ichidagi har bir raqamni aylanib chiqamiz
+    const result = arr.map((num) => {
+        // 2. Har bir raqam uchun yangi obyekt hosil qilib qaytaramiz
+        return {
+            number: num,
+            square: num * num // Raqamning kvadrati
+        };
+    });
+
+    // 3. Hosil bo'lgan obyektlar massivini qaytaramiz
+    return result;
+}
+
+// --- TEKSHIRISH ---
+
+// 1. Misoldagi ketma-ket sonlar holati
+const result1 = getSquareNumbers([1, 2, 3]);
+console.log("result 1:", result1);
+
+// 2. Turli xil sonlar berilgan holat
+const result2 = getSquareNumbers([4, 7, 10]);
+console.log("result 2:", result2);
+
+
+/**
+ * L-TASK:
+ * Shart: Shunday function yozing, u string qabul qilsin va
+ * string ichidagi hamma so'zlarni chappasiga yozib va
+ * so'zlar ketma-ketligini buzmasdan stringni qaytarsin.
+ *
+ * MASALAN: reverseSentence("we like coding!") return "ew ekil !gnidoc"
+
 
 function reverseSentence(sentence) {
     // 1. Gapni so'zlarga ajratib olamiz (bo'sh joy orqali)
@@ -34,6 +70,7 @@ console.log("result 2:", result2); // "tpircsavaJ si emosewa"
 // 3. Bitta so'zli holat
 const result3 = reverseSentence("Hello");
 console.log("result 3:", result3); // "olleH"
+*/
 /**
  * J-TASK:
  * Shart: Shunday function yozing, u parametridagi array ichida
