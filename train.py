@@ -1,32 +1,69 @@
 """
-M-TASK: 
-Shart: Shunday function yozing, u string qabul qilsin va string 
-palindrom (to'g'ri o'qilganda ham, orqasidan o'qilganda ham 
-bir xil o'qiladigan so'z) ekanligini aniqlab boolean qiymat qaytarsin.
-
-MASALAN: palindrom_check("dad") return True; palindrom_check("son") return False;
+O-TASK: 
+Shart: Shunday function yozing, u har xil valuelardan iborat array (list) 
+qabul qilsin va List ichidagi sonlar yig'indisini hisoblab 
+chiqqan javobni qaytarsin.
+MASALAN: calculate_summary([10, "10", {"son": 10}, True, 35]) return 45
 """
 
 
-def palindrom_check(text):
-    text = text.lower()
-    reversed_text = text[::-1]
-    return text == reversed_text
+def calculate_summary(lst):
+    total_sum = 0
+
+    # 1. Ro'yxat ichidagi har bir elementni aylanib chiqamiz
+    for item in lst:
+        # 2. Element aynan raqam (int yoki float) ekanligini tekshiramiz.
+        if isinstance(item, (int, float)) and type(item) != bool:
+            # 3. Agar element son bo'lsa, uni umumiy yig'indiga qo'shamiz
+            total_sum += item
+
+    return total_sum
 
 # --- TEKSHIRISH ---
 
 
-# 1. Palindrom bo'lgan holat
-result1 = palindrom_check("dad")
-print("result 1:", result1)  # True
+# 1. Misoldagi holat (faqat 10 va 35 hisoblanadi, True yoki string o'tkazib yuboriladi)
+result1 = calculate_summary([10, "10", {"son": 10}, True, 35])
+print("result 1:", result1)
 
-# 2. Palindrom bo'lmagan holat
-result2 = palindrom_check("son")
-print("result 2:", result2)  # False
+# 2. Float (o'nlik) sonlar va turli tiplar aralashgan holat
+result2 = calculate_summary([5.5, [1, 2], 4.5, False, "hello"])
+print("result 2:", result2)
 
-# 3. Kattaroq palindrom so'z (katta harf bilan)
-result3 = palindrom_check("Madam")
-print("result 3:", result3)  # True
+# 3. Ichida umuman son bo'lmagan holat
+result3 = calculate_summary(["abc", None, {"a": 1}])
+print("result 3:", result3)
+
+
+# """
+# M-TASK:
+# Shart: Shunday function yozing, u string qabul qilsin va string
+# palindrom (to'g'ri o'qilganda ham, orqasidan o'qilganda ham
+# bir xil o'qiladigan so'z) ekanligini aniqlab boolean qiymat qaytarsin.
+
+# MASALAN: palindrom_check("dad") return True; palindrom_check("son") return False;
+# """
+
+
+# def palindrom_check(text):
+#     text = text.lower()
+#     reversed_text = text[::-1]
+#     return text == reversed_text
+
+# # --- TEKSHIRISH ---
+
+
+# # 1. Palindrom bo'lgan holat
+# result1 = palindrom_check("dad")
+# print("result 1:", result1)  # True
+
+# # 2. Palindrom bo'lmagan holat
+# result2 = palindrom_check("son")
+# print("result 2:", result2)  # False
+
+# # 3. Kattaroq palindrom so'z (katta harf bilan)
+# result3 = palindrom_check("Madam")
+# print("result 3:", result3)  # True
 
 
 # """
