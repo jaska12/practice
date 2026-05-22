@@ -1,13 +1,49 @@
 /**
- * N-TASK: 
- * Shart: Shunday function yozing, u raqamlardan tashkil topgan array 
- * qabul qilsin va array ichidagi har bir raqam uchun raqamni o'zi 
- * hamda o'sha raqamni kvadratidan tashkil topgan object hosil qilib, 
- * hosil bo'lgan objectlarni array ichida qaytarsin.
+ * P-TASK: 
+ * Shart: Shunday function yozing, u object qabul qilsin va objectni 
+ * nested arrayga (massivlar ichidagi massiv) o'tkazib, o'sha arrayni qaytarsin.
  * 
- * MASALAN: getSquareNumbers([1, 2, 3]) return 
- * [{number: 1, square: 1}, {number: 2, square: 4}, {number: 3, square: 9}];
+ * MASALAN: objectToArray({a: 10, b: 20}) return [['a', 10], ['b', 20]]
  */
+
+function objectToArray(obj) {
+    // 1. JavaScript'ning tayyor Object.entries() metodidan foydalanamiz.
+    // Bu metod object'ning har bir [kalit, qiymat] juftligini arrayga o'girib beradi.
+    const result = Object.entries(obj);
+
+    // 2. Hosil bo'lgan arrayni qaytaramiz
+    return result;
+}
+
+// --- TEKSHIRISH ---
+
+// 1. Misoldagi oddiy object holati
+const result1 = objectToArray({ a: 10, b: 20 });
+console.log("result 1:", result1);
+// Natija: [ [ 'a', 10 ], [ 'b', 20 ] ]
+
+// 2. Ko'proq va har xil turdagi qiymatga ega object holati
+const result2 = objectToArray({ name: "MIT", age: 25, isStudent: true });
+console.log("result 2:", result2);
+// Natija: [ [ 'name', 'MIT' ], [ 'age', 25 ], [ 'isStudent', true ] ]
+
+// 3. Bo'sh object berilgan holat
+const result3 = objectToArray({});
+console.log("result 3:", result3);
+// Natija: [] (bo'sh array)
+
+
+
+/**
+ * N-TASK:
+ * Shart: Shunday function yozing, u raqamlardan tashkil topgan array
+ * qabul qilsin va array ichidagi har bir raqam uchun raqamni o'zi
+ * hamda o'sha raqamni kvadratidan tashkil topgan object hosil qilib,
+ * hosil bo'lgan objectlarni array ichida qaytarsin.
+ *
+ * MASALAN: getSquareNumbers([1, 2, 3]) return
+ * [{number: 1, square: 1}, {number: 2, square: 4}, {number: 3, square: 9}];
+
 
 function getSquareNumbers(arr) {
     // 1. .map() metodi orqali array ichidagi har bir raqamni aylanib chiqamiz
@@ -32,8 +68,7 @@ console.log("result 1:", result1);
 // 2. Turli xil sonlar berilgan holat
 const result2 = getSquareNumbers([4, 7, 10]);
 console.log("result 2:", result2);
-
-
+*/
 /**
  * L-TASK:
  * Shart: Shunday function yozing, u string qabul qilsin va
